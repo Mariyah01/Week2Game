@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24d4432f9bcd34c44b4777efb61f86f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: Level1
+  level: Level3
 --- !u!64 &59893975
 MeshCollider:
   m_ObjectHideFlags: 0
