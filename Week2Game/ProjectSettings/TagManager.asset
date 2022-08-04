@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - MovingGround
+  - Enemy
+  - InfectedGround
   layers:
   - Default
   - TransparentFX

@@ -5,35 +5,25 @@ using UnityEngine;
 
 public class PlayerMovement2D : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //Movement speed
     [SerializeField] private float speed;
+    //Player's Rigidbody
     private Rigidbody RB;
-    private Rigidbody movingGround;
+
 
     void Start()
     {
+        //Reference the player's Rigidbody
         RB = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Get the horizontal axis data (for 2D movement) multiplied by speed. Zero the Y axis.
         Vector2 movement = new Vector2(Input.GetAxis("Horizontal") * speed, 0);
+        //Set the Rigidbody's velocity
         RB.velocity = new Vector2(movement.x, RB.velocity.y);
     }
     
-
-    // private void OnCollisionEnter(Collision collision)
-    // {
-    //     Debug.Log("I'm on the moving ground");
-    //     if(gameObject.CompareTag("MovingGround"))
-    //         collision.gameObject.transform.SetParent(gameObject.transform,true);
-    // }
-    //
-    //
-    // private void OnCollisionExit(Collision other)
-    // {
-    //     if(gameObject.CompareTag("MovingGround"))
-    //         other.gameObject.transform.parent = null;
-    // }
 }

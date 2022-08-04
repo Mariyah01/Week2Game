@@ -4,9 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class OnFall : MonoBehaviour
 {
-    // Start is called before the first frame update
-    private void OnCollisionEnter()
+    //On collision, check if the object is the player.
+    //If the object is the player, load the active scene
+    private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject.CompareTag("Player"))
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
