@@ -14,8 +14,8 @@ public class Bullet : MonoBehaviour
     {
         //Referencing the bullet's RigidBody 
         _rigidbody = GetComponent<Rigidbody>();
-        //Adding force to the bullet's RigidBody; getting it to move in the right direction
-        _rigidbody.AddForce(Vector3.right*bulletSpeed);
+        //Adding force to the bullet's RigidBody; getting it on the x-axis
+        _rigidbody.AddForce(transform.right* bulletSpeed);
         //Deleting the bullet after the life span, so that it disappears even if it didn't hit an enemy, preventing bullets from accumulating in the scene
         Invoke("Delete",bulletLifespan);
     }
